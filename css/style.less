@@ -272,6 +272,47 @@ Form
 }
 
 /*//////////////////////////////////////////////////////////
+Table
+/////////////////////////////////////////////////////////*/
+
+.table-group {
+    overflow: auto;
+    margin-bottom: 1em;
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 0;
+        table-layout: auto;
+        white-space: nowrap;
+
+        tr {
+
+            &:nth-child(even) {
+                background: @bg-gray;
+            }
+        }
+
+        th {
+            padding: .5em;
+            background: @bg-dark;
+            color: @text-white;
+            border: 1px solid @bg-dark;
+        }
+
+        td {
+            padding: .5em;
+            text-align: center;
+            border: 1px solid @bg-dark;
+
+            span {
+                margin: .2em;
+            }
+        }
+    }
+}
+
+/*//////////////////////////////////////////////////////////
 Navigation
 /////////////////////////////////////////////////////////*/
 
@@ -520,6 +561,64 @@ Single
         color: @text-white;
         font-size: @text-s;
         font-weight: 500;
+    }
+}
+
+/*//////////////////////////////////////////////////////////
+Admin
+/////////////////////////////////////////////////////////*/
+
+.admin-wrapper {
+    margin: 50px 0;
+}
+
+.admin-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 2em;
+}
+
+.admin-menus {
+    background: @bg-dark;
+    color: @text-white;
+    border-radius: .5em;
+    padding: 1em;
+
+    h2 {
+        font-size: @text-l;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li a {
+            display: block;
+            padding: .5em 0;
+        }
+    }
+}
+
+.admin-header {
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+
+    h2 {
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+        color: @text-gray-1;
+        font-size: @text-xs;
+        display: flex;
+        flex-direction: row;
+        gap: .5em;
     }
 }
 

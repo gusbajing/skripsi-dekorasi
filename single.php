@@ -6,10 +6,33 @@ if ( isset( $_GET['type'] ) ) {
 
 	$type = $_GET['type'];
 
-	if ( $type == 'detail' ) {
+	if ( $type == 'detail' && isset( $_GET['id'] ) ) {
+
 		include 'part/single-detail.php';
+
 	} else if ( $type == 'single' ) {
-		include 'part/single-about.php';
+
+		if ( isset( $_GET['page'] ) ) {
+
+			$page = $_GET['page'];
+
+			if ( $page == 'about' ) {
+
+				include 'part/single-about.php';
+
+			} else if ( $page == 'services' ) {
+
+				include 'part/single-services.php';
+
+			} else if ( $page == 'contact' ) {
+
+				include 'part/single-contact.php';
+				
+			} else {
+				header("index.php?error=invalid_page");
+			}
+		}	
+
 	} else {
 		header("index.php?error=invalid_page");
 	}

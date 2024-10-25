@@ -30,8 +30,8 @@ require 'functions.php';
 					<ul>
 						<li><a href="index.php">Beranda</a></li>
 						<li><a href="single.php?type=single&page=about">Tentang Kami</a></li>
-						<li><a href="#">Layanan</a></li>
-						<li><a href="#">Kontak</a></li>
+						<li><a href="single.php?type=single&page=services">Layanan</a></li>
+						<li><a href="single.php?type=single&page=contact">Kontak</a></li>
 					</ul>
 				</div>
 
