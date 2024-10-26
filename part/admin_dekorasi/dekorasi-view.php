@@ -47,6 +47,11 @@ $row = $result->fetch( PDO::FETCH_ASSOC );
 	</div>
 
 	<div class="input-group">
+		<label for="">Harga Dekorasi</label>
+		<input type="text" value="Rp <?php price_format( $row['dekorasi_harga'] ); ?>" disabled>
+	</div>
+
+	<div class="input-group">
 		<label for="">Deskripsi Dekorasi</label>
 		<textarea name="" cols="30" rows="3" disabled><?php echo $row['dekorasi_deskripsi']; ?></textarea>
 	</div>

@@ -43,9 +43,9 @@ $result = $dekorasi->view();
 				<td>
 					<a href="admin-dekorasi.php?page=view&id=<?php echo $row['dekorasi_id']; ?>">Lihat</a>
 					<span>/</span>
-					<a href="#">Edit</a>
+					<a href="admin-dekorasi.php?page=edit&id=<?php echo $row['dekorasi_id']; ?>">Edit</a>
 					<span>/</span>
-					<a href="#">Hapus</a>
+					<a href="action/admin_dekorasi/dekorasi-delete.php?id=<?php echo $row['dekorasi_id']; ?>" onclick="return confirm('Yakin hapus data?')">Hapus</a>
 				</td>
 			</tr>
 

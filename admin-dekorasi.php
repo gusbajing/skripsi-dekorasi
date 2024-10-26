@@ -22,6 +22,8 @@
 						include 'part/admin_dekorasi/dekorasi-form.php';
 					} else if ( $page == 'view' ) {
 						include 'part/admin_dekorasi/dekorasi-view.php';
+					} else if ( $page == 'edit' ) {
+						include 'part/admin_dekorasi/dekorasi-edit.php';
 					} else {
 						include 'part/admin_dekorasi/dekorasi-data.php';
 					}
