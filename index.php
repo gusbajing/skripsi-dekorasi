@@ -34,36 +34,6 @@
 	</div>
 </section>
 
-<section class="paket-wrapper section-margin">
-	<div class="container">
-		<div class="paket-container">
-			
-			<div class="paket-header">
-				<h2>Paket Dekorasi</h2>
-				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, tenetur</p>
-			</div>
-
-			<div class="paket-column">
-
-				<?php for ( $i = 1; $i <= 4; $i++ ) { ?>
-				
-				<div class="paket-item">
-					<div class="paket-image">
-						<img src="img/img.jpg" alt="">
-					</div>
-					<div class="paket-entry">
-						<h3><a href="single.php?type=detail&id=">Paket Dekorasi</a></h3>
-						<p>Rp 5.000.000</p>
-						<a href="#" class="paket-cta">Sewa Dekorasi</a>
-					</div>
-				</div>
-
-				<?php } ?>
-
-			</div>
-
-		</div>
-	</div>
-</section>
+<?php include 'part/index/index-paket.php'; ?>
 
 <?php include 'footer.php'; ?>

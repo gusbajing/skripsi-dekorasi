@@ -61,4 +61,8 @@ $row = $result->fetch( PDO::FETCH_ASSOC );
 		<textarea name="" cols="30" rows="3" disabled><?php echo $row['dekorasi_detail']; ?></textarea>
 	</div>
 
+	<div class="input-group">
+		<a href="admin-dekorasi.php" class="cta-link">< Kembali</a>
+	</div>
+
 </div>

@@ -1,3 +1,25 @@
+<?php
+
+if ( isset( $_GET['id'] ) ) {
+	$id = $_GET['id'];
+} else {
+	header("location:index.php?error=invalid_id");
+}
+
+require_once 'class/Database.php';
+require_once 'class/Dekorasi.php';
+
+$database = new Database();
+$db = $database->connect();
+
+$dekorasi = new Dekorasi( $db );
+
+$dekorasi->dekorasi_id = $id;
+$result = $dekorasi->view( 'id' );
+$row = $result->fetch( PDO::FETCH_ASSOC );
+
+?>
+
 <section class="single-wrapper">
 	<div class="container">
 		<div class="single-container">
@@ -7,20 +29,24 @@
 			</div>
 
 			<div class="single-metadata">
-				<h2>Paket Dekorasi</h2>
-				<h3>Rp 5.000.000</h3>
+				<h2><?php echo $row['dekorasi_nama'] ?> - Paket <?php echo $row['dekorasi_paket']; ?></h2>
+				<h3>Rp <?php price_format( $row['dekorasi_harga'] ); ?></h3>
 			</div>
 
 			<div class="single-entry">
 
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque alias, numquam eius saepe dignissimos. Assumenda, maiores? Alias nihil officiis autem maxime harum rerum aspernatur, saepe fugiat qui inventore voluptates expedita magnam molestias recusandae eaque, sapiente dolorum? Qui, suscipit ipsam consectetur accusamus nemo recusandae quidem quibusdam eos excepturi voluptas aliquid eaque.</p>
+				<p><?php echo $row['dekorasi_deskripsi']; ?></p>
 				
 				<ul class="custom-list">
-					<li><span><?php echo icons( 'check' ); ?></span> Dekorasi Wedding</li>
-					<li><span><?php echo icons( 'check' ); ?></span> Dekorasi Wedding</li>
-					<li><span><?php echo icons( 'check' ); ?></span> Dekorasi Wedding</li>
-					<li><span><?php echo icons( 'check' ); ?></span> Dekorasi Wedding</li>
-					<li><span><?php echo icons( 'check' ); ?></span> Dekorasi Wedding</li>
+					<?php
+
+					$list = explode( '/', $row['dekorasi_detail'] );
+
+					foreach ( $list as $item ) {
+						echo '<li><span>' . icons( 'check' ) . '</span> ' . $item . '</li>';
+					}
+
+					?>
 				</ul>
 			</div>
 
