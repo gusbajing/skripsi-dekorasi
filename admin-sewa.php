@@ -6,15 +6,7 @@
 			
 			<div class="admin-column-1-1">
 
-				<div class="admin-menus">
-					<h2>Dashboard</h2>
-					<ul>
-						<li><a href="#">Data Penyewaan</a></li>
-						<li><a href="#">Data Dekorasi</a></li>
-						<li><a href="#">Data Pelanggan</a></li>
-						<li><a href="#">Logout</a></li>
-					</ul>
-				</div>
+				<?php admin_menus(); ?>
 
 			</div>
 
@@ -50,9 +42,7 @@
 								<td>
 									<a href="#">Lihat</a>
 									<span>/</span>
-									<a href="#">Edit</a>
-									<span>/</span>
-									<a href="#">Hapus</a>
+									<a href="#">Konfirmasi</a>
 								</td>
 							</tr>
 

@@ -1,5 +1,24 @@
 <?php
 
+function admin_menus() {
+?>
+	<div class="admin-menus">
+		<h2>Dashboard</h2>
+		<ul>
+			<li><a href="admin-sewa.php">Data Penyewaan</a></li>
+			<li><a href="admin-dekorasi.php">Data Dekorasi</a></li>
+			<li><a href="#">Data Pelanggan</a></li>
+			<li><a href="#">Logout</a></li>
+		</ul>
+	</div>
+<?php
+}
+
+function price_format( $price ) {
+
+	echo number_format( $price, 0, ',', '.' );
+}
+
 function icons( $name ) {
 
 	$icons = [

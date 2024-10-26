@@ -29,16 +29,16 @@ if ( isset( $_GET['type'] ) ) {
 				include 'part/single-contact.php';
 				
 			} else {
-				header("index.php?error=invalid_page");
+				header("location:index.php?error=invalid_page");
 			}
 		}	
 
 	} else {
-		header("index.php?error=invalid_page");
+		header("location:index.php?error=invalid_page");
 	}
 
 } else {
-	header("index.php?error=invalid_page");
+	header("ilocation:ndex.php?error=invalid_page");
 }
 
 include 'footer.php';
